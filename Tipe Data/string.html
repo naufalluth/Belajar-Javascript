@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tipe Data: String</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="tipedata String">
+      <h2>Tipe Data: String</h2>
+      <p>
+        String adalah tipe data dalam javascript yang digunakan untuk
+        merepresentasikan data tekstual atau plain text.
+      </p>
+      <p>
+        String di javascript bisa ditulis dengan menggunakan tanda kutip satu
+        ('...') atau tanda kutip dua ("...").
+      </p>
+      <h3>Escape Character</h3>
+      <p>
+        Escape character adalah karakter khusus yang digunakan untuk
+        merepresentasikan karakter yang tidak bisa ditulis langsung dalam
+        string. Escape character ditulis dengan menggunakan tanda backslash (\).
+      </p>
+      <p>Berikut adalah beberapa escape character yang sering digunakan:</p>
+      <ul>
+        <li>\n : newline</li>
+        <li>\t : tab</li>
+        <li>\b : backspace</li>
+        <li>\r : carriage return</li>
+        <li>\f : form feed</li>
+        <li>\\ : backslash</li>
+        <li>\' : single quote</li>
+        <li>\" : double quote</li>
+      </ul>
+      <h3>Contoh Penggunaan</h3>
+
+      <p>
+        Contoh penggunaan escape character:
+        <br />
+        <code>
+          var alamat = "Jl. Jend. Sudirman\nNo. 123";
+          <br />
+          var nama = "John Doe";
+          <br />
+          var quote = "He said, \"Hello, World!\"";
+        </code>
+      </p>
+      <h3>Contoh Operasi pada String</h3>
+      <p>
+        Contoh penggunaan tipe data string:
+        <br />
+        <code>
+          var nama = "John Doe";
+          <br />
+          var alamat = 'Jl. Jend. Sudirman No. 123';
+        </code>
+      </p>
+      <p>
+        String juga bisa digabungkan dengan menggunakan operator (+).
+        <br />
+        <code>
+          var nama = "John";
+          <br />
+          var belakang = "Doe";
+          <br />
+          var namaLengkap = nama + " " + belakang;
+        </code>
+      </p>
+      <p>
+        String juga bisa diakses dengan menggunakan indeks karakter.
+        <br />
+        <code>
+          var nama = "John Doe";
+          <br />
+          var karakterPertama = nama[0];
+          <br />
+          var karakterTerakhir = nama[nama.length - 1];
+        </code>
+      </p>
+      <p>
+        String juga bisa diakses dengan menggunakan method-method yang
+        disediakan oleh javascript.
+        <br />
+        <code>
+          var nama = "John Doe";
+          <br />
+          var hurufKapital = nama.toUpperCase();
+          <br />
+          var hurufKecil = nama.toLowerCase();
+          <br />
+          var panjang = nama.length;
+          <br />
+          var index = nama.indexOf("Doe");
+          <br />
+          var potongan = nama.slice(5, 8);
+        </code>
+      </p>
+    </div>
+  </body>
+</html>
