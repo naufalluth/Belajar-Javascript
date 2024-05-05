@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript | Control Flow</title>
+  </head>
+  <body>
+    <h1>Control Flow</h1>
+    <p>
+      Control Flow adalah konsep yang digunakan untuk mengatur alur
+      pemrogramakan sehingga alur atau perintah yang dilakukan berjalan sesuai
+      dengan program yang diinginkan
+    </p>
+    <h2>Bentuk dari Control Flow:</h2>
+    <ol>
+      <li>Pengulangan (Looping/Iteration)</li>
+      <li>Pengkondisian (Conditioning)</li>
+    </ol>
+
+    <h2>1. Pengulangan (Looping/Iteration)</h2>
+    <p>
+      Pengulangan adalah proses yang digunakan untuk mengeksekusi perintah yang
+      sama berulang kali
+    </p>
+    <h3>Syntax| Keyword untuk Pengulangan atau Looping</h3>
+    <ul>
+      <li>
+        <strong>For Loop</strong>
+        <p>
+          For Loop adalah perulangan yang digunakan untuk mengeksekusi perintah
+          yang sama berulang kali dengan jumlah perulangan yang sudah ditentukan
+        </p>
+      </li>
+      <li>
+        <strong>While Loop</strong>
+        <p>
+          While Loop adalah perulangan yang digunakan untuk mengeksekusi
+          perintah yang sama berulang kali dengan jumlah perulangan yang tidak
+          ditentukan
+        </p>
+      </li>
+      <li>
+        <strong>Do While Loop</strong>
+        <p>
+          Do While Loop adalah perulangan yang digunakan untuk mengeksekusi
+          perintah yang sama berulang kali dengan jumlah perulangan yang tidak
+          ditentukan, namun perintah akan dijalankan minimal satu kali
+        </p>
+      </li>
+    </ul>
+
+    <h2>2. Pengkondisian|Percabangan (Conditioning|Branching)</h2>
+    <p>Pengkondisian|Percabangan adalah sebuah keadaan dimana program bisa menjalakan perintah atau statement berdasarkan kondisi yang diberikan</p>
+    <h3>Syntax| Keyword untuk Pengkondisian atau Percabangan</h3>
+    <ul>
+      <li>
+        <strong>If Else</strong>
+        <p>
+          If Else adalah percabangan yang digunakan untuk mengeksekusi perintah
+            yang berbeda berdasarkan kondisi yang diberikan.
+        </p>
+        <h3>If Esle kemudian dibagi kembali menjadi 3 bentuk yaitu:</h3>
+        <ul>
+          <li>
+            <strong>If</strong>
+            <p>
+              If adalah percabangan yang digunakan untuk mengeksekusi perintah
+                jika kondisi yang diberikan bernilai benar
+            </p>
+        </li>
+        <li>
+          <strong>If else</strong>
+          <p>
+            If Else adalah pengkondisian yang dilakukan jika kondisi yang bernilai true dan false. terdapat dua perintah yang akan dijalankan pada masing-masing kondisi dengan nilai true dan false.
+          </p>
+        <li>
+            <strong>Else If</strong>
+            <p>
+              Else If adalah percabangan yang digunakan untuk mengeksekusi perintah jika kondisi yang diberikan bernilai benar, namun jika kondisi tersebut bernilai salah maka akan dilanjutkan ke percabangan selanjutnya. atau bisa disebut sebagai percabangan yang lebih dari satu kondisi. 
+          <strong>Switch Case</strong>
+          <p>
+            Switch Case adalah percabangan yang digunakan untuk mengeksekusi
+            perintah yang berbeda berdasarkan kondisi yang diberikan
+          </p>
+        </li>
+        </ul>
+
+    <script>
+      // PENGULANGAN (LOOPING/ITERATION)
+      // 1. For Loop
+      // Contoh penulisan tanpa perulangan
+
+      // alert ('Mulai');
+      // alert ('Hello World');
+      // alert ('Hello World');
+      // alert ('Hello World');
+      // alert ('Hello World');
+      // alert ('Hello World');
+      // alert ('Selesai');
+
+      // Contoh penulisan dengan perulangan (for)
+
+      
+    //   alert("Mulai");
+    //   for (var i = 0; i < 5; i++) {
+    //     alert("Hello World");
+    //   }
+    //   alert("Selesai");
+
+    //   PENGKONDISIAN|PERCABANGAN (CONDITIONING|BRANCHING)
+    var angka = prompt('masukan angka: ');
+    if ( angka % 2 === 0 ) {
+        alert(angka + ' adalah bilangan genap');
+    } else {
+        alert(angka + ' adalah bilangan ganjil');
+    };
+
+    </script>
+  </body>
+</html>
