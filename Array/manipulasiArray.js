@@ -38,6 +38,8 @@ var hari = ["Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu", "Minggu"];
 
 // console.log(hari.join(" - "));
 
+// console.log(hari.length);
+
 // Parameter pada method join berfungsi sebagai separator yaitu menambahkan atau mengubah tanda pemisah setiap elemen pada array ketika ditampilkan.
 
 // b) Push & Pop
@@ -60,4 +62,4 @@ hari.unshift("Hari");
 
 hari.shift();
 
-console.log(hari.join(" - "));
+// console.log(hari.join(" - "));
