@@ -17,25 +17,40 @@ var tambahPenumpang = function (namaPenumpang, penumpang) {
       if (penumpang[i] == undefined) {
         // penumpang selanjutnya duduk/mengisi array yang kosong.
         penumpang[i] = namaPenumpang;
-
         // kembalikan isi & dan keluar dari function
         return penumpang;
         // Jika sudah ada nama yang sama
       } else if (penumpang[i] == namaPenumpang) {
         //tampilkan pesan kesalahannya
-        console.log(namaPenumpang + "Sudah ada di dalam angkot");
+        console.log(namaPenumpang + " Sudah ada di dalam angkot");
+
+        // Jika seluruh kursi sudah terisi, penumpang duduk di kursi paling belakang
       } else if (i == penumpang.length - 1) {
         penumpang.push(namaPenumpang);
+        return penumpang;
       }
     }
   }
 };
 
-var ulang = true;
-
-while (ulang) {
-  alert("Halo mau naik angkot mba/mas?");
-  var namaPenumpang = prompt("Masukan Nama Anda!");
-  penumpang = tambahPenumpang(namaPenumpang, penumpang);
-  ulang = confirm("Lagi?");
-}
+var hapusPenumpang = function (namaPenumpang, penumpang) {
+  // Jika Angkot Kosong tampilkan pesan bahwa angkot kosong
+  if (penumpang.length == 0) {
+    console.log("Angkot Masih Kosong");
+  }
+  // jika ada penumpang yang namanya sesuai, hapus nama penumpang dengan memberi nilai undefined.
+  else {
+    for (var i = 0; i < penumpang.length; i++) {
+      if (penumpang[i] == namaPenumpang) {
+        penumpang[i] = undefined;
+        // Jika terdapat nama penumpang yang tidak ada, maka tampilkan bahwa tidak terdapat penumpang didalam angkot
+      } else if (i == penumpang.length - 1) {
+        console.log(
+          namaPenumpang +
+            "Tidak ada penumpang dengan nama tersebut di dalam angkot."
+        );
+      }
+      return penumpang;
+    }
+  }
+};
