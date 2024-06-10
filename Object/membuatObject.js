@@ -47,9 +47,14 @@ function Mahasiswa(nama, nim, email, jurusan) {
   this.jurusan = jurusan;
 }
 
+// Memanggil constructor CARA 1 (DECLARATION VARIABEL)
 var mhs4 = new Mahasiswa(
   "Angga Pradita",
   "2285190038",
   "2285190038@untirta.ac.id",
   "Teknik Mesin"
 );
+
+// atau, CARA 2 (TANPA DECLARATION VARIABEL)
+
+new Mahasiswa("Angga Pradita", "2285190038", "Teknik Mesin");
