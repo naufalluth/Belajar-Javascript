@@ -27,7 +27,13 @@ const paragraph = document.getElementsByTagName("p");
 // ATAU UNTUK MENGUBAH/MEMANIPULASI SEMUA ELEMENT PADA HTMLCollection, DAPAT DIGUNAKAN LOOPING
 
 for (let i = 0; i < paragraph.length; i++) {
-  paragraph[i].style.backgroundColor = "lightblue";
+  if (i % 2 === 0) {
+    paragraph[i].style.backgroundColor = "lightblue";
+  } else if (i % 2 == 1) {
+    paragraph[i].style.backgroundColor = "lightgreen";
+  } else {
+    paragraph[i].style.backgroundColor = "lightyellow";
+  }
 }
 
 // Apabila hanya terdapat 1 elemet yang memiliki tag yang diambil sebagai contoh 'h1', maka kita bisa menambahkan nomor index pertama atau [0] pada akhir penulisan selection. seperti contoh dibawah ini
@@ -38,7 +44,7 @@ const h1 = document.getElementsByTagName("h1")[0];
 // -> HTMLCollection
 
 const p1 = document.getElementsByClassName("p1");
-p1[0].style.backgroundColor = "lightgreen";
+// p1[0].style.backgroundColor = "lightgreen";
 p1[0].innerHTML =
   "<strong>ini hasil manipulasi dengan menggunakan getElementsByClassName</strong>";
 // atau
