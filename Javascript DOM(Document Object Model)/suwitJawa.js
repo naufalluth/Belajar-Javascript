@@ -36,10 +36,28 @@ function putar() {
 
 
 // Menampilkan Skoring
-let skorKomputer = 0,
-skorPlayer = 0;
+
+// let skorKomputer = 0;
+// let skorPlayer = 0;
+// function tampilSkor(hasil) {
+//     const hasilKomputer = document.querySelector('.hasil-komputer');
+//     const hasilPlayer = document.querySelector('.hasil-player');
+//     if (hasil == 'MENANG') {
+//         skorPlayer++;
+//         console.log(skorPlayer);
+//         hasilPlayer.innerHTML = 'Menang : ' + skorPlayer;
+//     }
+//     else if (hasil == 'KALAH') {
+//         skorKomputer++;
+//         console.log(skorKomputer);
+//         hasilKomputer.innerHTML = 'Menang : ' + skorKomputer;
+//     }
+// }
 
 // REFACTORING HASIL
+let skorKomputer = 0;
+let skorPlayer = 0;
+// Deklarasi Nilai Awal Skor, harus berada di luar eventListener
 const pilihan = document.querySelectorAll("li img");
 pilihan.forEach (function (pil){
     pil.addEventListener('click', function(){
@@ -52,13 +70,24 @@ pilihan.forEach (function (pil){
         setTimeout(function(){
             const imgKomputer = document.querySelector(".img-komputer");
         imgKomputer.setAttribute("src", "img/" + pilihanKomputer + ".png");
-
+    // Menampilkan Hasil dan Merubah Image Pilihan Computer
   const info = document.querySelector(".info");
   info.innerHTML = hasil;
         }, 1000)
-        
-    })
-})
+  // Menampilkan Skor Komputer dan Player
+        setTimeout(function(){
+        if (hasil == 'MENANG') {
+            skorPlayer++;
+            document.querySelector('.hasil-player').innerHTML = 'Player Menang : ' + skorPlayer;
+        } else if (hasil == 'KALAH') {
+            skorKomputer++;
+            document.querySelector('.hasil-komputer').innerHTML = 'Com Menang : ' + skorKomputer;
+        }
+    }, 1000);
+
+
+    });
+});
 
 
 // Menampilkan Hasil dan Merubah Image Pilihan Computer
