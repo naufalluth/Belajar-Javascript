@@ -58,6 +58,8 @@ function putar() {
 let skorKomputer = 0;
 let skorPlayer = 0;
 // Deklarasi Nilai Awal Skor, harus berada di luar eventListener
+// agar tidak terus menerus direset ke 0, dan nilai bisa dilakukan increment
+
 const pilihan = document.querySelectorAll("li img");
 pilihan.forEach (function (pil){
     pil.addEventListener('click', function(){
