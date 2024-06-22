@@ -18,12 +18,26 @@ const close = document.querySelectorAll('.close');
 //         e.target.parentElement.style.display = 'none';
 //     })
 // };
+// element.target adalah method yang digunakan untuk mengetahui element mana yang sedang di klik
 
-close.forEach(function(el){
-    el.addEventListener('click', function(e){
+close.forEach(function (el) {
+    el.addEventListener('click', function (e) {
         e.target.parentElement.style.display = 'none';
-    }); 
+        e.preventDefault();
+    });
 });
+
+
+// do
+
+// syntak forEach (parameter pertama digunakan untuk memberikan element nama), lalu parameter kedua digunakan untuk memberikan nama event dari element pertama. setelah itu kita bisa membuat function untuk menjalankan aksi yang kita inginkan (dalam hal ini adalah menghilangkan element card yang di klik close nya)
+
+// Prevent Default
+// prevent default adalah method dalam javascript yang berfungsi untuk mencegah aksi default dalam suatu element
+
+// sebagai contoh tag <a> memiliki aksi default yaitu menghubungkan atau memindahkan halaman saat ini ke halaman lain. dengan menggunakan preventDefault() kita bisa mencegah aksi default tersebut
+
+// contoh lainnya preventDefault adalah tag button secara default memiliki aksi untuk submit data yang telah diisikan kepada server, dengan menggunakan preventDefault() kita bisa mengubah aksi default ini menjadi aksi yang kita buat sendiri
 
 const nama = document.querySelector('.nama');
 // console.log(nama.parentElement.parentElement.parentElement);
